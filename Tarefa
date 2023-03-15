@@ -1,0 +1,76 @@
+public @interface Tarefas {
+    public static void main(String[] args){
+        Tarefa1 T1 = new Tarefa1("Tarefa1");
+        T1.setPriority(10);
+
+        Tarefa2 T2 = new Tarefa2("Tarefa2");
+        T2.setPriority(1);
+
+        Tarefa T3 = new Tarefa3("Tarefa3");
+        T3.setPriority(4);
+        //
+        T1.start();
+        T2.start();
+        T3.start();
+    }
+}
+class Tarefa1 extends Thread {
+    public Tarefa1(String nome) {
+        super(nome);
+    }
+    public void run() {
+    System.out.println("-- ");
+    System.out.println("** ");
+    System.out.println("Fluxo do Programa \"1\" ");
+    System.out.println(" ");
+    String A = getName();
+    System.out.println("Nome da Thread = "+A);
+    int b = getPriority();
+    System.out.println("Uma Thread de Prioridade "+b);
+    for(int i=0;i<=10;i++) {
+        System.out.println("-"+i);
+    }
+    System.out.println(" ");
+    System.out.println(" ");
+    }
+}
+class Tarefa2 extends Thread {
+    public Tarefa2(String nome) {
+        super(nome);
+    }
+    public void run() {
+        System.out.println("-- ");
+        System.out.println("** ");
+        System.out.println("Fluxo do Programa \"2\" ");
+        System.out.println(" ");
+        String A = getName();
+        System.out.println("Nome da Thread = "+A);
+        int b = getPriority();
+        System.out.println("Uma Thread de Prioridade "+b);
+        for(int i=10;i>=0;i--) {
+            System.out.println("-"+i);
+        }
+        System.out.println(" ");
+        System.out.println(" ");
+    }
+}
+class Tarefa3 extends Thread {
+    public Tarefa3(String nome) {
+        super(nome);
+    }
+    public void run() {
+        System.out.println("-- ");
+        System.out.println("** ");
+        System.out.println("Fluxo do Programa \"3\" ");
+        System.out.println(" ");
+        String A = getName();
+        System.out.println("Nome da Thread = "+A);
+        int b = getPriority();
+        System.out.println("Uma Thread de Prioridade "+b);
+        for(int i=10;i>=0;i--) {
+            System.out.println("-"+i);
+        }
+        System.out.println(" ");
+        System.out.println(" ");
+    }
+}
